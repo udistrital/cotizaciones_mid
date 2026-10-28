@@ -64,7 +64,7 @@ func TestSolicitudControllerDetalleExitoso(t *testing.T) {
 		if r.Method != http.MethodGet {
 			t.Errorf("método = %q; se esperaba GET", r.Method)
 		}
-		if r.URL.Path != "/solicitud_cotizacion/123/detalle" {
+		if r.URL.Path != "/v1/solicitud_cotizacion/123/detalle" {
 			t.Errorf("ruta = %q; valor inesperado", r.URL.Path)
 		}
 		w.Header().Set("Content-Type", "application/json")

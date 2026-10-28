@@ -30,7 +30,7 @@ func (c *SolicitudController) GetDetalle() {
 		return
 	}
 
-	path := "solicitud_cotizacion/" + url.PathEscape(id) + "/detalle"
+	path := "v1/solicitud_cotizacion/" + url.PathEscape(id) + "/detalle"
 	status, headers, body, err := c.Service.Request(
 		c.Ctx.Request.Context(),
 		http.MethodGet,
